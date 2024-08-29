@@ -83,7 +83,7 @@ const Homepage = () => {
     >
       <Sidebar logo={logo} profile={profile} />
       <div className="show_list" onClick={() => setShowList(!showList)}>
-        {!showList ? "Show List" : "Hide List"}
+        {!showList ? "Show Track" : "Hide Track"}
       </div>
       <div className={showList ? "middle" : "middle display_none"}>
         <Topbar activeTab={activeTab} setActiveTab={setActiveTab} />

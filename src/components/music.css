@@ -242,6 +242,10 @@ input {
     height: 240px;
   }
 
+  .list_item{
+    width: 100%;
+  }
+
   .show_list {
     display: flex;
     justify-content: end;
