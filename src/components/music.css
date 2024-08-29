@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.homepage {
+  background: linear-gradient(
+    108deg,
+    rgba(51, 66, 94, 0.6) 2.46%,
+    rgba(0, 0, 0, 0.6) 99.84%
+  ),
+    #000;
+  box-sizing: border-box;
+  display: flex;
+  padding: 1.9rem;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.middle {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.for_you,
+.top_tracks {
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.not_selected {
+  opacity: 0.5;
+}
+
+.search_bar {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-style: normal;
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8rem;
+  outline: none;
+}
+/* 
+input:hover,
+input:active,
+input:focus-visible {
+  outline: none;
+  border: none;
+} */
+
+.list_item_container {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  max-height: calc(100vh - 10rem);
+  overflow: scroll;
+}
+
+.list_item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 350px;
+}
+
+.list_item img {
+  border-radius: 50%;
+}
+
+.song_name {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.artist_name {
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.selected {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.media-player {
+  width: 45%;
+  justify-content: center;
+  margin: 0 60px;
+}
+
+.rhap_container {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 12px 0;
+  width: 480px;
+}
+
+.rhap_time,
+.rhap_progress-indicator,
+.rhap_repeat-button {
+  display: none;
+}
+
+.rhap_progress-filled {
+  background-color: #fff;
+}
+
+.rhap_progress-bar {
+  background-color: #868686;
+}
+
+.played_songs_details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song_played {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+.artist_played {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.cover_art_container {
+  margin: 32px 0 12px 0;
+}
+
+.cover_art {
+  border-radius: 8px;
+  width: 480px;
+  height: 480px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.show_list {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .homepage {
+    padding: 20px;
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .middle {
+    width: 100%;
+  }
+
+  .media-player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50% 0;
+  }
+
+  .rhap_container {
+    width: 240px;
+  }
+
+  .cover_art_container {
+    margin: 32px 0 12px 0;
+  }
+
+  .cover_art {
+    border-radius: 8px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .show_list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #868686;
+    padding: 8px;
+    border-radius: 8px;
+    width: fit-content;
+    float: right;
+    margin: 8px 0;
+  }
+
+  .display_none {
+    display: none !important;
+  }
+
+  .list_item_container {
+    max-height: 100vh;
+  }
+}
